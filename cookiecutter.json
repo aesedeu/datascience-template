@@ -1,0 +1,17 @@
+{
+    "project_name": "Enter your project name",
+    "description": "Description of the project",
+    "author": "Name Surname",
+    "email": "example@example.com",
+    "python_version": "3.11 (as example)",
+    "project_team": [
+        "Great Team",
+        "Team of Legends",
+        "The Other Team"
+    ],
+    "dataset_storage": [
+        {"sql": "none"},
+        {"hadoop": {"container": "container-name"}},
+        {"s3": {"bucket": "bucket-name", "aws_profile": "default"}}
+    ]
+}
