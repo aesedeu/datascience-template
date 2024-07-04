@@ -5,9 +5,9 @@
     "email": "example@example.com",
     "python_version": "3.11 (as example)",
     "project_team": [
-        "Great Team",
-        "Team of Legends",
-        "The Other Team"
+        "CRM team",
+        "Retention team",
+        "Analytics team"
     ],
     "dataset_storage": [
         {"sql": "none"},
