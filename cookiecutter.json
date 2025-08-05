@@ -1,14 +1,16 @@
 {
-    "project_name": "Enter your project name",
-    "description": "Description of the project",
-    "author": "Name Surname",
-    "email": "example@example.com",
-    "python_version": "3.11 (as example)",
-    "project_team": [
-        "CRM team",
-        "Retention team",
-        "Analytics team"
-    ],
+    "project_name": {
+        "type": "string",
+        "default": "project",
+        "description": "Введите название проекта (латиницей, без пробелов)",
+        "prompt": "Название проекта (например: data-pipeline)"
+    },
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "git_repository": {
+        "type": "string",
+        "description": "URL Git-репозитория (обязательно!)",
+        "prompt": "Git repo URL (например: https://github.com/user/repo.git)"
+    },
     "dataset_storage": [
         {"sql": "none"},
         {"hadoop": {"container": "container-name"}},
