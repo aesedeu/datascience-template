@@ -5,15 +5,21 @@
         "description": "Введите название проекта (латиницей, без пробелов)",
         "prompt": "Название проекта (например: data-pipeline)"
     },
-    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "project_slug": {
+        "type": "string",
+        "default": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}"
+    },
     "git_repository": {
         "type": "string",
         "description": "URL Git-репозитория (обязательно!)",
         "prompt": "Git repo URL (например: https://github.com/user/repo.git)"
     },
-    "dataset_storage": [
-        {"sql": "none"},
-        {"hadoop": {"container": "container-name"}},
-        {"s3": {"bucket": "bucket-name", "aws_profile": "default"}}
-    ]
+    "dataset_storage": {
+        "type": "list",
+        "default": [
+            {"sql": "none"},
+            {"hadoop": {"container": "container-name"}},
+            {"s3": {"bucket": "bucket-name", "aws_profile": "default"}}
+        ]
+    }
 }
